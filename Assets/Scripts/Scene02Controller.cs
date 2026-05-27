@@ -96,9 +96,20 @@ public class Scene02Controller : MonoBehaviour
             Color c = sel ? selectedBorderColor : Color.clear;
             foreach (var strip in borderStrips[i])
                 strip.color = c;
+        }
+    }
 
-            // Leve escala para reforçar o destaque
-            molduraButtons[i].transform.localScale = sel ? Vector3.one * 1.06f : Vector3.one;
+    // Reaplica a escala depois do Animator (que roda durante Update) para
+    // garantir que nenhum estado do Animator sobrescreva o destaque do botão.
+    void LateUpdate()
+    {
+        if (molduraButtons == null) return;
+
+        for (int i = 0; i < molduraButtons.Length; i++)
+        {
+            if (molduraButtons[i] == null) continue;
+            bool sel = i == selectedIndex;
+            // molduraButtons[i].transform.localScale = sel ? Vector3.one * 1.06f : Vector3.one;
         }
     }
 
