@@ -1299,11 +1299,11 @@ RectTransform:
   m_Children:
   - {fileID: 1862225366}
   - {fileID: 1125605717}
-  - {fileID: 341658746}
   - {fileID: 228285273}
   - {fileID: 893057160}
   - {fileID: 371106015}
   - {fileID: 2008078713}
+  - {fileID: 341658746}
   m_Father: {fileID: 2008650263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
