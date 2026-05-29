@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24dad874026fd146a4db5bede782f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectId: SempreLivreDesfileInterativo
+  projectId: SempreLivreDesfile
   token: 
   accessToken: 
   projectVersion: 
@@ -464,7 +464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.5375, y: -78.6619}
+  m_AnchoredPosition: {x: 2.5375, y: -117}
   m_SizeDelta: {x: 699, y: 142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &895137267
