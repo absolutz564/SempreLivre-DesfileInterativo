@@ -227,10 +227,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24dad874026fd146a4db5bede782f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectId: SempreLivreDesfile
+  activationKey: SEMPRELIVE_DESFILE_INTERATIVO
+  label: 
+  logMasterKeyInPlainText: 0
   token: 
   accessToken: 
-  projectVersion: 
+  experienceName: 
+  experienceLogo: 
+  clientLabel: 
+  userName: 
+  expiresAt: 
 --- !u!4 &314858012
 Transform:
   m_ObjectHideFlags: 0

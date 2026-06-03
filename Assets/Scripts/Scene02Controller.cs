@@ -25,6 +25,7 @@ public class Scene02Controller : MonoBehaviour
     }
 
     // Cria 4 imagens finas como filhos do botão formando uma borda retangular
+    // do lado de FORA do botão (para não ficar atrás de elementos internos).
     Image[] CreateBorderFor(Button btn)
     {
         Image[] strips = new Image[4];
@@ -45,31 +46,32 @@ public class Scene02Controller : MonoBehaviour
 
             switch (s)
             {
-                case 0: // Top
+                case 0: // Top — fica ACIMA do botão
                     rt.anchorMin = new Vector2(0f, 1f);
                     rt.anchorMax = new Vector2(1f, 1f);
-                    rt.pivot     = new Vector2(0.5f, 1f);
-                    rt.anchoredPosition = Vector2.zero;
-                    rt.sizeDelta = new Vector2(0f, borderThickness);
-                    break;
-                case 1: // Bottom
-                    rt.anchorMin = new Vector2(0f, 0f);
-                    rt.anchorMax = new Vector2(1f, 0f);
                     rt.pivot     = new Vector2(0.5f, 0f);
                     rt.anchoredPosition = Vector2.zero;
-                    rt.sizeDelta = new Vector2(0f, borderThickness);
+                    // sizeDelta.x = +borderThickness*2 estende para cobrir os cantos
+                    rt.sizeDelta = new Vector2(borderThickness * 2f, borderThickness);
                     break;
-                case 2: // Left
+                case 1: // Bottom — fica ABAIXO do botão
+                    rt.anchorMin = new Vector2(0f, 0f);
+                    rt.anchorMax = new Vector2(1f, 0f);
+                    rt.pivot     = new Vector2(0.5f, 1f);
+                    rt.anchoredPosition = Vector2.zero;
+                    rt.sizeDelta = new Vector2(borderThickness * 2f, borderThickness);
+                    break;
+                case 2: // Left — fica à ESQUERDA do botão
                     rt.anchorMin = new Vector2(0f, 0f);
                     rt.anchorMax = new Vector2(0f, 1f);
-                    rt.pivot     = new Vector2(0f, 0.5f);
+                    rt.pivot     = new Vector2(1f, 0.5f);
                     rt.anchoredPosition = Vector2.zero;
                     rt.sizeDelta = new Vector2(borderThickness, 0f);
                     break;
-                case 3: // Right
+                case 3: // Right — fica à DIREITA do botão
                     rt.anchorMin = new Vector2(1f, 0f);
                     rt.anchorMax = new Vector2(1f, 1f);
-                    rt.pivot     = new Vector2(1f, 0.5f);
+                    rt.pivot     = new Vector2(0f, 0.5f);
                     rt.anchoredPosition = Vector2.zero;
                     rt.sizeDelta = new Vector2(borderThickness, 0f);
                     break;
